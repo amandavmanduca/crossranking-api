@@ -12,5 +12,8 @@ module.exports = {
     },
     synchronize: process.env.DB_SYNC == 'true',
     migrationsRun: true,
+    ssl: {
+      rejectUnauthorized: false
+    },
   };
   
