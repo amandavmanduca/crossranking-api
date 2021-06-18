@@ -27,6 +27,11 @@ import { CompetitionRanksModule } from './competition-ranks/competition-ranks.mo
       autoLoadEntities: true,
       synchronize: true,
       logging: true,
+      port: 5432,
+      host: process.env.DB_HOST,
+      ssl: {
+        rejectUnauthorized: false
+      },
     }),
     GraphQLModule.forRoot({
       // set to true to automatically generate schema
